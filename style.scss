@@ -1,0 +1,99 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+    font-family: Raleway;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 27px;
+    color: #262626;
+}
+
+a {
+    text-decoration: none;
+    color: #262626;
+}
+
+a:visited {
+    color: #262626;
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-header {
+    background: url(img/header-img.png) no-repeat center;
+    background-size: cover;
+    height: 1087px;
+    .container {
+        height: 100%;
+        position: relative;
+    }
+    .navbar {
+        padding: 50px 0;
+
+        .page-logo {
+            float: left;
+            font-family: Pacifico;
+            font-size: 50px;
+            font-weight: 400;
+            line-height: 25px;
+            text-transform: none;
+
+        }
+        .nav-items {
+            float: right;
+            .nav-item {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 25px;
+                text-transform: uppercase;
+                padding: 3px;
+                margin: 0 12px;
+            }
+            .active {
+                border-top: 3px solid #ff6033;
+            }
+        }
+    }
+    .header-info {
+        margin-top: 250px;
+        width: 368px;
+        .header-info-text {
+            h2 {
+                padding: 20px 0;
+                margin: 0;
+                font-size: 60px;
+                font-weight: 900;
+                line-height: 25px;
+            }
+            p {
+                margin-bottom: 42px;
+            }
+
+
+            .header-info-button {
+                padding: 20px 25px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+                background-color: #ff6033;
+                color: #ffffff;
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .scroll-section {
+        width: 100%;
+        position: absolute;
+        bottom: 69px;
+        display: flex;
+        justify-content: center;
+
+    }
+
+}
