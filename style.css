@@ -1,76 +1,69 @@
 body,
 html {
-  padding: 0;
-  margin: 0;
   font-family: Raleway;
   font-size: 17px;
   font-weight: 300;
   line-height: 27px;
-  color: #262626; }
+  color: #262626;
+  width: 100%; }
 
-a {
-  text-decoration: none;
-  color: #262626; }
-
-a:visited {
-  color: #262626; }
-
-.container {
-  max-width: 1170px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto; }
+a, a:hover {
+  text-decoration: none; }
 
 .section-header {
-  background: url(img/header-img.png) no-repeat center;
+  height: 1087px;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-image: url(img/header-img.png);
   background-size: cover;
-  height: 1087px; }
-  .section-header .container {
-    height: 100%;
-    position: relative; }
-  .section-header .navbar {
+  background-position: center; }
+  .section-header .main-navbar {
+    max-width: 100%;
     padding: 50px 0; }
-    .section-header .navbar .page-logo {
-      float: left;
+    .section-header .main-navbar .navbar-brand {
       font-family: Pacifico;
       font-size: 50px;
       font-weight: 400;
       line-height: 25px;
-      text-transform: none; }
-    .section-header .navbar .nav-items {
-      float: right; }
-      .section-header .navbar .nav-items .nav-item {
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 25px;
-        text-transform: uppercase;
-        padding: 3px;
-        margin: 0 12px; }
-      .section-header .navbar .nav-items .active {
-        border-top: 3px solid #ff6033; }
+      padding: 0 15px; }
+    .section-header .main-navbar .navbar-collapse .navbar-nav .nav-item {
+      box-sizing: border-box;
+      line-height: 25px;
+      font-weight: 700;
+      padding: 0; }
+      .section-header .main-navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+        padding: 5px 0;
+        margin: 0 15px;
+        color: #262626;
+        border-top: 3px solid transparent; }
+      .section-header .main-navbar .navbar-collapse .navbar-nav .nav-item:hover > * {
+        border-top: 3px solid #ff6033 !important; }
+    .section-header .main-navbar .navbar-collapse .navbar-nav .active > * {
+      border-top: 3px solid #ff6033 !important; }
   .section-header .header-info {
-    margin-top: 250px;
-    width: 368px; }
+    padding-top: 354px;
+    height: 100%;
+    width: 100%; }
     .section-header .header-info .header-info-text h2 {
-      padding: 20px 0;
-      margin: 0;
       font-size: 60px;
       font-weight: 900;
-      line-height: 25px; }
-    .section-header .header-info .header-info-text p {
-      margin-bottom: 42px; }
+      margin-bottom: 22px; }
     .section-header .header-info .header-info-text .header-info-button {
+      display: inline-block;
       padding: 20px 25px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
       background-color: #ff6033;
       color: #ffffff;
       font-size: 20px;
-      text-transform: uppercase; }
-  .section-header .scroll-section {
-    width: 100%;
-    position: absolute;
-    bottom: 69px;
-    display: flex;
-    justify-content: center; }
+      text-transform: uppercase;
+      font-weight: 300;
+      line-height: 20px; }
+    .section-header .header-info .scroll-section {
+      position: absolute;
+      bottom: 69px;
+      text-align: center; }
+      .section-header .header-info .scroll-section .scroll-img {
+        margin-right: auto;
+        margin-left: auto; }
 
 /*# sourceMappingURL=style.css.map */
