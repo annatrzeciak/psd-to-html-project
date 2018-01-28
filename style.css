@@ -9,40 +9,46 @@ a,
 a:hover {
   text-decoration: none; }
 
+.section-title {
+  font-size: 90px;
+  font-weight: 700; }
+
+.main-navbar {
+  max-width: 100%;
+  margin: 45px 15px; }
+  .main-navbar .navbar-brand {
+    font-family: Pacifico;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 50px; }
+  .main-navbar .navbar-collapse .navbar-nav .nav-item {
+    box-sizing: border-box;
+    line-height: 25px;
+    padding: 0; }
+    .main-navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+      text-align: center;
+      padding: 5px 0;
+      margin: 0 15px;
+      color: #262626;
+      font-weight: 700;
+      border-top: 3px solid transparent; }
+    .main-navbar .navbar-collapse .navbar-nav .nav-item:hover > * {
+      border-top: 3px solid #ff6033 !important; }
+  .main-navbar .navbar-collapse .navbar-nav .active > * {
+    border-top: 3px solid #ff6033 !important; }
+
 .section-header {
   background-image: url(img/header-img.png);
   background-size: cover;
   background-position: center; }
-  .section-header .main-navbar {
-    max-width: 100%;
-    padding: 45px 15px; }
-    .section-header .main-navbar .navbar-brand {
-      font-family: Pacifico;
-      font-size: 50px;
-      font-weight: 400;
-      line-height: 50px; }
-    .section-header .main-navbar .navbar-collapse .navbar-nav .nav-item {
-      box-sizing: border-box;
-      line-height: 25px;
-      padding: 0; }
-      .section-header .main-navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
-        text-align: center;
-        padding: 5px 0;
-        margin: 0 15px;
-        color: #262626;
-        font-weight: 700;
-        border-top: 3px solid transparent; }
-      .section-header .main-navbar .navbar-collapse .navbar-nav .nav-item:hover > * {
-        border-top: 3px solid #ff6033 !important; }
-    .section-header .main-navbar .navbar-collapse .navbar-nav .active > * {
-      border-top: 3px solid #ff6033 !important; }
   .section-header .header-info {
     padding-top: 354px;
+    padding-left: 0;
     height: 100%;
     width: 100%; }
     .section-header .header-info .header-info-text {
       margin-bottom: 404px; }
-      .section-header .header-info .header-info-text h2 {
+      .section-header .header-info .header-info-text .header-title {
         font-size: 60px;
         font-weight: 900;
         margin-bottom: 22px; }
@@ -72,11 +78,9 @@ a:hover {
     align-items: center; }
     .section-about-us .about-us-img .about-img {
       max-width: 100%; }
-  .section-about-us .about-us-text h2 {
+  .section-about-us .about-us-text .section-title {
     margin-top: 100px;
-    color: #ffffff;
-    font-size: 90px;
-    font-weight: 700; }
+    color: #ffffff; }
   .section-about-us .about-us-text p {
     color: #ffffff;
     margin-bottom: 10px; }
@@ -92,6 +96,7 @@ a:hover {
       margin-bottom: 20px;
       height: 100px;
       max-width: 400px;
+      width: 100%;
       display: flex;
       align-items: center; }
       .section-our-services .our-services-buttons .button span {
@@ -113,16 +118,45 @@ a:hover {
     background-repeat: no-repeat;
     margin-top: 100px;
     margin-bottom: 164px;
-    font-size: 90px;
-    font-weight: 600;
-    color: #ffffff;
+    padding: 0;
     display: flex;
     align-items: center;
-    min-height: 300px;
-    line-height: 100px; }
+    min-height: 300px; }
+    .section-our-services .our-services-title .section-title {
+      line-height: 100px;
+      color: #ffffff; }
 
-@media (max-width: 375px) {
-  .our-services-title {
+.section-gallery {
+  text-align: center;
+  background-color: #ffe92f;
+  padding-top: 100px;
+  padding-bottom: 85px; }
+  .section-gallery > * {
+    box-sizing: border-box;
+    object-fit: contain; }
+  .section-gallery .section-title {
+    font-size: 90px;
+    font-weight: 700; }
+  .section-gallery img {
+    max-height: 100%;
+    width: 100%;
+    margin: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); }
+  .section-gallery .button-gallery {
+    display: inline-block;
+    margin: 35px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    background-color: #5585a2;
+    padding: 20px 43px;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 20px; }
+
+@media (max-width: 400px) {
+  .section-title {
     font-size: 70px !important; } }
+@media (max-width: 300px) {
+  .section-title {
+    font-size: 50px !important; } }
 
 /*# sourceMappingURL=style.css.map */
