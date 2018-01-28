@@ -152,6 +152,36 @@ a:hover {
     font-size: 20px;
     line-height: 20px; }
 
+.section-subscribe {
+  background: url(img/bg-subscribe.png) no-repeat;
+  background-size: contain;
+  background-position: right;
+  padding: 145px 0; }
+  .section-subscribe .subscribe-title {
+    font-size: 40px;
+    font-weight: 700; }
+  .section-subscribe .subscribe-input {
+    box-sizing: border-box;
+    padding: 18px 28px;
+    border: 1px solid #262626;
+    max-width: 570px;
+    width: 100%;
+    margin-top: 30px;
+    margin-right: 30px; }
+  .section-subscribe .subscribe-button {
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    background-color: #96b92c;
+    padding: 20px 30px;
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 20px; }
+
+@media (max-width: 576px) {
+  .subscribe-input {
+    margin-right: 0 !important; } }
 @media (max-width: 400px) {
   .section-title {
     font-size: 70px !important; } }
