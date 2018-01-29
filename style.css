@@ -3,7 +3,8 @@
   font-size: 17px;
   font-weight: 300;
   line-height: 27px;
-  color: #262626; }
+  color: #262626;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1); }
 
 a,
 a:hover {
@@ -11,6 +12,20 @@ a:hover {
 
 .section-title {
   font-size: 90px;
+  font-weight: 700; }
+
+.button {
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  text-transform: uppercase;
+  display: inline-block;
+  cursor: pointer; }
+  .button:hover {
+    transform: scale(1.1);
+    font-weight: 500; }
+
+input:focus {
   font-weight: 700; }
 
 .main-navbar {
@@ -53,15 +68,9 @@ a:hover {
         font-weight: 900;
         margin-bottom: 22px; }
       .section-header .header-info .header-info-text .header-info-button {
-        display: inline-block;
         padding: 20px 25px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         background-color: #ff6033;
-        color: #ffffff;
-        font-size: 20px;
-        text-transform: uppercase;
-        font-weight: 300;
-        line-height: 20px; }
+        color: #ffffff; }
     .section-header .header-info .scroll-section {
       position: absolute;
       bottom: 69px;
@@ -102,7 +111,6 @@ a:hover {
       .section-our-services .our-services-buttons .button span {
         width: 77.5%;
         text-align: center;
-        font-size: 20px;
         font-weight: 700; }
       .section-our-services .our-services-buttons .button .service-icon {
         height: 100%;
@@ -143,14 +151,10 @@ a:hover {
     margin: 15px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); }
   .section-gallery .button-gallery {
-    display: inline-block;
     margin: 35px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     background-color: #5585a2;
     padding: 20px 43px;
-    color: #ffffff;
-    font-size: 20px;
-    line-height: 20px; }
+    color: #ffffff; }
 
 .section-subscribe {
   background: url(img/bg-subscribe.png) no-repeat;
@@ -169,15 +173,72 @@ a:hover {
     margin-top: 30px;
     margin-right: 30px; }
   .section-subscribe .subscribe-button {
-    font-size: 20px;
     color: #ffffff;
-    line-height: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     background-color: #96b92c;
     padding: 20px 30px;
-    display: inline-block;
     margin-top: 30px;
     margin-bottom: 20px; }
+
+.section-blog {
+  padding: 100px 0;
+  background-color: #b07cf7; }
+  .section-blog .section-blog-text > * {
+    text-align: center;
+    color: #fff; }
+  .section-blog .blog-group-cards .card-1 {
+    background: url(img/blog-img-1.png); }
+  .section-blog .blog-group-cards .card-2 {
+    background-image: url(img/blog-img-2.png); }
+  .section-blog .blog-group-cards .card-3 {
+    background-image: url(img/blog-img-3.png); }
+  .section-blog .blog-group-cards .blog-card {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    height: 310px;
+    box-sizing: border-box;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); }
+    .section-blog .blog-group-cards .blog-card-date {
+      text-align: center;
+      border-radius: 5px;
+      background: rgba(38, 38, 38, 0.5);
+      color: #fff;
+      width: 60px;
+      font-size: 21px;
+      font-weight: 700;
+      height: 60px;
+      margin: 30px;
+      display: inline-block; }
+      .section-blog .blog-group-cards .blog-card-date .number {
+        font-size: 32px;
+        font-weight: 700;
+        color: #fff; }
+    .section-blog .blog-group-cards .blog-card-text {
+      padding: 50px 20px 23px;
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
+      width: 100%;
+      height: 50%;
+      position: absolute;
+      bottom: 0;
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column; }
+      .section-blog .blog-group-cards .blog-card-text .blog-card-title {
+        font-weight: 700;
+        font-size: 20px; }
+      .section-blog .blog-group-cards .blog-card-text .blog-card-subtitle {
+        font-size: 13px;
+        margin-bottom: 0; }
+  .section-blog .blog-button {
+    background-color: #f72b3b;
+    padding: 20px 43px;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto; }
 
 @media (max-width: 576px) {
   .subscribe-input {
