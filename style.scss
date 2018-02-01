@@ -5,7 +5,7 @@
     line-height: 27px;
     color: #262626;
     transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-    
+
 }
 
 a,
@@ -29,26 +29,30 @@ p {
     text-transform: uppercase;
     display: inline-block;
     cursor: pointer;
-    transition: 0.2s linear;
+    transition: all 0.2s linear;
     &:hover {
         outline: 3px solid;
         outline-offset: 12px;
         font-weight: 500;
+        -ms-border: 3px dashed gray;
     }
     &:active {
         transform: scale(0.9);
-       
+
+
     }
 }
-.image{
+
+.image {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-     z-index: 1;
+    z-index: 1;
     position: relative;
-    &:hover{
+    &:hover {
         transform: scale(1.1);
-         z-index: 10;
+        z-index: 10;
     }
 }
+
 input:focus {
     font-weight: 700;
 }
@@ -70,7 +74,7 @@ input:focus {
                 box-sizing: border-box;
                 line-height: 25px;
                 padding: 0;
-                 
+
 
 
                 .nav-link {
@@ -111,7 +115,7 @@ input:focus {
         width: 100%;
 
         .header-info-text {
-            margin-bottom: 404px;
+            padding-bottom: 404px;
             .header-title {
                 font-size: 60px;
                 font-weight: 900;
@@ -124,6 +128,7 @@ input:focus {
                 color: #ffffff;
                 &:hover {
                     outline-color: #ff6033;
+
                 }
             }
         }
@@ -181,13 +186,26 @@ input:focus {
             height: 100px;
             max-width: 400px;
             width: 100%;
-            display: flex;
-            align-items: center;
-
+            display: inline-table;
+            //            display: flex;
+            //            display: -webkit-box;
+            //            display: -moz-box;
+            //            display: -ms-flexbox;
+            //            display: -webkit-flex;
+            //            align-items: center;
+            //            -webkit-box-align: center;
+            //            -moz-box-align: center;
+            //            -ms-flex-align: center;
+            //            -webkit-align-items: center;
+            //            ;
+            //            justify-content: space-between;
             span {
                 width: 77.5%;
                 text-align: center;
                 font-weight: 700;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
 
 
             }
@@ -195,9 +213,9 @@ input:focus {
                 height: 100%;
                 width: 22.5%;
                 border-left: 1px solid #9d9d9d;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
             }
             &:hover {
                 outline-color: #ffffff;
@@ -246,7 +264,7 @@ input:focus {
         max-height: 100%;
         width: 100%;
         margin: 15px 0;
-       
+
     }
     .button-gallery {
         margin: 35px;
@@ -373,7 +391,7 @@ input:focus {
                     margin-bottom: 0;
                 }
             }
-       
+
         }
     }
     .blog-button {
@@ -382,8 +400,8 @@ input:focus {
         color: #fff;
         margin-left: auto;
         margin-right: auto;
-         &:hover {
-            outline-color:  #f72b3b;
+        &:hover {
+            outline-color: #f72b3b;
         }
     }
 
@@ -480,16 +498,17 @@ input:focus {
 }
 
 
-@media (max-width:991px){
-    .section-our-services{
-        .our-services-buttons{
+@media (max-width:991px) {
+    .section-our-services {
+        .our-services-buttons {
             order: 2;
         }
-        .our-services-title{
+        .our-services-title {
             order: 1;
         }
     }
 }
+
 @media (max-width: 768px) {
     .text-footer {
         text-align: center !important;
@@ -513,6 +532,7 @@ input:focus {
         font-size: 50px !important;
     }
 }
+
 @keyframes scroll-animation {
     from {}
     to {
