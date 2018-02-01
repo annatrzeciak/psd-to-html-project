@@ -24,11 +24,12 @@ p {
   text-transform: uppercase;
   display: inline-block;
   cursor: pointer;
-  transition: 0.2s linear; }
+  transition: all 0.2s linear; }
   .button:hover {
     outline: 3px solid;
     outline-offset: 12px;
-    font-weight: 500; }
+    font-weight: 500;
+    -ms-border: 3px dashed gray; }
   .button:active {
     transform: scale(0.9); }
 
@@ -78,7 +79,7 @@ input:focus {
     height: 100%;
     width: 100%; }
     .section-header .header-info .header-info-text {
-      margin-bottom: 404px; }
+      padding-bottom: 404px; }
       .section-header .header-info .header-info-text .header-title {
         font-size: 60px;
         font-weight: 900;
@@ -127,19 +128,21 @@ input:focus {
       height: 100px;
       max-width: 400px;
       width: 100%;
-      display: flex;
-      align-items: center; }
+      display: inline-table; }
       .section-our-services .our-services-buttons .button span {
         width: 77.5%;
         text-align: center;
-        font-weight: 700; }
+        font-weight: 700;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center; }
       .section-our-services .our-services-buttons .button .service-icon {
         height: 100%;
         width: 22.5%;
         border-left: 1px solid #9d9d9d;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center; }
       .section-our-services .our-services-buttons .button:hover {
         outline-color: #ffffff; }
   .section-our-services .our-services-title {

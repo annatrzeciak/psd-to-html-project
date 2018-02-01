@@ -5,7 +5,7 @@ $('a').click(function () {
     return false;
 });
 $(window).scroll(function () {
-    if (this.scrollY > 45) {
+   if ($(this).scrollTop() > 45) {
         $('#navbar').css({
             marginTop: '0px',
             marginBottom: '0px',
