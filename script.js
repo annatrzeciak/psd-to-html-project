@@ -22,6 +22,6 @@ $(window).scroll(function () {
 $('.nav-link').on('click',function() {
   $('.navbar-collapse').collapse('hide');
 });
-$('.header-info-button').click(function(){
+$('.show-info-button').click(function(){
     $('#modalGetFreeNow').modal('show');
 })
