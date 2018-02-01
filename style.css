@@ -23,10 +23,12 @@ p {
   font-size: 20px;
   text-transform: uppercase;
   display: inline-block;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: 0.2s linear; }
   .button:hover {
     outline: 3px solid;
-    outline-offset: 12px; }
+    outline-offset: 12px;
+    font-weight: 500; }
   .button:active {
     transform: scale(0.9); }
 
@@ -43,7 +45,7 @@ input:focus {
 
 .main-navbar {
   max-width: 100%;
-  margin: 45px 15px; }
+  margin: 45px 0; }
   .main-navbar .navbar-brand {
     font-family: Pacifico;
     font-size: 50px;
@@ -59,7 +61,8 @@ input:focus {
       margin: 0 15px;
       color: #262626;
       font-weight: 700;
-      border-top: 3px solid transparent; }
+      border-top: 3px solid transparent;
+      display: inline-block; }
     .main-navbar .navbar-collapse .navbar-nav .nav-item:hover > * {
       border-top: 3px solid #ff6033 !important; }
   .main-navbar .navbar-collapse .navbar-nav .active {
@@ -327,9 +330,11 @@ input:focus {
         color: #ff2b58;
         font-weight: 700; }
 
-@keyframes scroll-animation {
-  to {
-    opacity: 0.3; } }
+@media (max-width: 991px) {
+  .section-our-services .our-services-buttons {
+    order: 2; }
+  .section-our-services .our-services-title {
+    order: 1; } }
 @media (max-width: 768px) {
   .text-footer {
     text-align: center !important; } }
@@ -342,5 +347,8 @@ input:focus {
 @media (max-width: 300px) {
   .section-title {
     font-size: 50px !important; } }
+@keyframes scroll-animation {
+  to {
+    opacity: 0.3; } }
 
 /*# sourceMappingURL=style.css.map */

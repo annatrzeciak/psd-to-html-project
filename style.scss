@@ -5,6 +5,7 @@
     line-height: 27px;
     color: #262626;
     transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    
 }
 
 a,
@@ -28,10 +29,11 @@ p {
     text-transform: uppercase;
     display: inline-block;
     cursor: pointer;
-
+    transition: 0.2s linear;
     &:hover {
         outline: 3px solid;
         outline-offset: 12px;
+        font-weight: 500;
     }
     &:active {
         transform: scale(0.9);
@@ -53,7 +55,7 @@ input:focus {
 
 .main-navbar {
     max-width: 100%;
-    margin: 45px 15px;
+    margin: 45px 0;
 
     .navbar-brand {
         font-family: Pacifico;
@@ -68,6 +70,7 @@ input:focus {
                 box-sizing: border-box;
                 line-height: 25px;
                 padding: 0;
+                 
 
 
                 .nav-link {
@@ -77,6 +80,7 @@ input:focus {
                     color: #262626;
                     font-weight: 700;
                     border-top: 3px solid transparent;
+                    display: inline-block;
 
                 }
                 &:hover > * {
@@ -475,13 +479,17 @@ input:focus {
 
 }
 
-@keyframes scroll-animation {
-    from {}
-    to {
-        opacity: 0.3;
+
+@media (max-width:991px){
+    .section-our-services{
+        .our-services-buttons{
+            order: 2;
+        }
+        .our-services-title{
+            order: 1;
+        }
     }
 }
-
 @media (max-width: 768px) {
     .text-footer {
         text-align: center !important;
@@ -503,5 +511,11 @@ input:focus {
 @media (max-width:300px) {
     .section-title {
         font-size: 50px !important;
+    }
+}
+@keyframes scroll-animation {
+    from {}
+    to {
+        opacity: 0.3;
     }
 }
