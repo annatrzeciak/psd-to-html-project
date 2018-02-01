@@ -12,6 +12,10 @@ a:hover {
     text-decoration: none;
 }
 
+p {
+    margin-bottom: 10px;
+}
+
 .section-title {
     font-size: 90px;
     font-weight: 700;
@@ -24,13 +28,25 @@ a:hover {
     text-transform: uppercase;
     display: inline-block;
     cursor: pointer;
-    &:hover {
-        transform: scale(1.1);
-        font-weight: 500;
 
+    &:hover {
+        outline: 3px solid;
+        outline-offset: 12px;
+    }
+    &:active {
+        transform: scale(0.9);
+       
     }
 }
-
+.image{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+     z-index: 1;
+    position: relative;
+    &:hover{
+        transform: scale(1.1);
+         z-index: 10;
+    }
+}
 input:focus {
     font-weight: 700;
 }
@@ -68,7 +84,7 @@ input:focus {
                 }
 
             }
-            .active > * {
+            .active {
 
                 border-top: 3px solid #ff6033 !important;
 
@@ -98,10 +114,13 @@ input:focus {
                 margin-bottom: 22px;
             }
             .header-info-button {
+                margin-top: 20px;
                 padding: 20px 25px;
                 background-color: #ff6033;
                 color: #ffffff;
-
+                &:hover {
+                    outline-color: #ff6033;
+                }
             }
         }
         .scroll-section {
@@ -110,6 +129,7 @@ input:focus {
             bottom: 69px;
             left: 0;
             text-align: center;
+            animation: scroll-animation 1s linear infinite alternate;
 
         }
     }
@@ -120,7 +140,7 @@ input:focus {
 
     background-color: #00c4c4;
     background-image: radial-gradient(circle 1125px at center, rgba(0, 196, 196, 0.9) 0%, rgba(0, 183, 183, 0.9) 32%, rgba(0, 173, 173, 0.9) 68%, rgba(0, 156, 156, 0.9) 100%);
-    padding: 70px 0;
+    padding: 70px 15px;
     .about-us-img {
         display: flex;
         justify-content: center;
@@ -137,9 +157,7 @@ input:focus {
 
         }
         p {
-
             color: #ffffff;
-            margin-bottom: 10px;
 
         }
     }
@@ -147,6 +165,8 @@ input:focus {
 
 .section-our-services {
     background-color: #70bfff;
+    padding-left: 15px;
+    padding-right: 15px;
     .our-services-buttons {
         margin-top: 180px;
         margin-bottom: 150px;
@@ -174,6 +194,9 @@ input:focus {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+            }
+            &:hover {
+                outline-color: #ffffff;
             }
         }
 
@@ -219,7 +242,7 @@ input:focus {
         max-height: 100%;
         width: 100%;
         margin: 15px 0;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+       
     }
     .button-gallery {
         margin: 35px;
@@ -227,6 +250,9 @@ input:focus {
         padding: 20px 43px;
         color: #ffffff;
 
+        &:hover {
+            outline-color: #5585a2;
+        }
     }
 }
 
@@ -256,8 +282,11 @@ input:focus {
         margin-top: 30px;
         margin-bottom: 20px;
 
-
+        &:hover {
+            outline-color: #96b92c;
+        }
     }
+
 
 }
 
@@ -289,7 +318,6 @@ input:focus {
             background-image: url(img/blog-img-3.png);
 
         }
-
         .blog-card {
             margin-bottom: 50px;
             margin-top: 50px;
@@ -341,7 +369,7 @@ input:focus {
                     margin-bottom: 0;
                 }
             }
-
+       
         }
     }
     .blog-button {
@@ -350,9 +378,114 @@ input:focus {
         color: #fff;
         margin-left: auto;
         margin-right: auto;
+         &:hover {
+            outline-color:  #f72b3b;
+        }
     }
 
 
+}
+
+.section-contact {
+    padding: 100px 0;
+    background: url(img/img-bg-contact.png) no-repeat;
+    background-size: cover;
+    .section-title,
+    .contact-text {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .form-group {
+        input,
+        textarea {
+            height: 50px;
+            max-width: 500px;
+            width: 100%;
+            margin: 7.5px 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 250px;
+        }
+        .form-input {
+            background-color: #00c4c4;
+            opacity: 0.5;
+            border: none;
+            color: #fff;
+            font-weight: 700;
+            &:focus {
+                opacity: 1;
+                border-left: 5px solid #355b82;
+
+            }
+
+        }
+    }
+    .address-date {
+        line-height: 25px;
+        h5 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+        p {
+            font-size: 20px;
+
+
+        }
+    }
+    ::placeholder {
+        font-size: 15px;
+        color: #fff;
+    }
+}
+
+.page-footer {
+    padding: 30px 0;
+    background-color: #262626;
+
+    min-height: 90px;
+    .text-footer {
+        color: #b9b9b9;
+        line-height: 30px;
+        &:nth-of-type(1) {
+            font-size: 16px;
+        }
+        &:nth-of-type(2) {
+            text-align: center;
+            a {
+
+                color: #b9b9b9;
+                font-family: Pacifico;
+                font-size: 25px;
+                font-weight: 400;
+            }
+        }
+        &:nth-of-type(3) {
+            text-align: right;
+            font-size: 15px;
+            .love-text {
+                color: #ff2b58;
+                font-weight: 700;
+            }
+        }
+    }
+
+
+}
+
+@keyframes scroll-animation {
+    from {}
+    to {
+        opacity: 0.3;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-footer {
+        text-align: center !important;
+    }
 }
 
 @media (max-width:576px) {

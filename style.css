@@ -10,6 +10,9 @@ a,
 a:hover {
   text-decoration: none; }
 
+p {
+  margin-bottom: 10px; }
+
 .section-title {
   font-size: 90px;
   font-weight: 700; }
@@ -22,8 +25,18 @@ a:hover {
   display: inline-block;
   cursor: pointer; }
   .button:hover {
+    outline: 3px solid;
+    outline-offset: 12px; }
+  .button:active {
+    transform: scale(0.9); }
+
+.image {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  position: relative; }
+  .image:hover {
     transform: scale(1.1);
-    font-weight: 500; }
+    z-index: 10; }
 
 input:focus {
   font-weight: 700; }
@@ -49,7 +62,7 @@ input:focus {
       border-top: 3px solid transparent; }
     .main-navbar .navbar-collapse .navbar-nav .nav-item:hover > * {
       border-top: 3px solid #ff6033 !important; }
-  .main-navbar .navbar-collapse .navbar-nav .active > * {
+  .main-navbar .navbar-collapse .navbar-nav .active {
     border-top: 3px solid #ff6033 !important; }
 
 .section-header {
@@ -68,19 +81,23 @@ input:focus {
         font-weight: 900;
         margin-bottom: 22px; }
       .section-header .header-info .header-info-text .header-info-button {
+        margin-top: 20px;
         padding: 20px 25px;
         background-color: #ff6033;
         color: #ffffff; }
+        .section-header .header-info .header-info-text .header-info-button:hover {
+          outline-color: #ff6033; }
     .section-header .header-info .scroll-section {
       position: absolute;
       bottom: 69px;
       left: 0;
-      text-align: center; }
+      text-align: center;
+      animation: scroll-animation 1s linear infinite alternate; }
 
 .section-about-us {
   background-color: #00c4c4;
   background-image: radial-gradient(circle 1125px at center, rgba(0, 196, 196, 0.9) 0%, rgba(0, 183, 183, 0.9) 32%, rgba(0, 173, 173, 0.9) 68%, rgba(0, 156, 156, 0.9) 100%);
-  padding: 70px 0; }
+  padding: 70px 15px; }
   .section-about-us .about-us-img {
     display: flex;
     justify-content: center;
@@ -91,11 +108,12 @@ input:focus {
     margin-top: 100px;
     color: #ffffff; }
   .section-about-us .about-us-text p {
-    color: #ffffff;
-    margin-bottom: 10px; }
+    color: #ffffff; }
 
 .section-our-services {
-  background-color: #70bfff; }
+  background-color: #70bfff;
+  padding-left: 15px;
+  padding-right: 15px; }
   .section-our-services .our-services-buttons {
     margin-top: 180px;
     margin-bottom: 150px; }
@@ -119,6 +137,8 @@ input:focus {
         display: flex;
         justify-content: center;
         align-items: center; }
+      .section-our-services .our-services-buttons .button:hover {
+        outline-color: #ffffff; }
   .section-our-services .our-services-title {
     background: url(img/img-services.png);
     background-size: contain;
@@ -148,13 +168,14 @@ input:focus {
   .section-gallery img {
     max-height: 100%;
     width: 100%;
-    margin: 15px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); }
+    margin: 15px 0; }
   .section-gallery .button-gallery {
     margin: 35px;
     background-color: #5585a2;
     padding: 20px 43px;
     color: #ffffff; }
+    .section-gallery .button-gallery:hover {
+      outline-color: #5585a2; }
 
 .section-subscribe {
   background: url(img/bg-subscribe.png) no-repeat;
@@ -178,6 +199,8 @@ input:focus {
     padding: 20px 30px;
     margin-top: 30px;
     margin-bottom: 20px; }
+    .section-subscribe .subscribe-button:hover {
+      outline-color: #96b92c; }
 
 .section-blog {
   padding: 100px 0;
@@ -239,7 +262,77 @@ input:focus {
     color: #fff;
     margin-left: auto;
     margin-right: auto; }
+    .section-blog .blog-button:hover {
+      outline-color: #f72b3b; }
 
+.section-contact {
+  padding: 100px 0;
+  background: url(img/img-bg-contact.png) no-repeat;
+  background-size: cover; }
+  .section-contact .section-title,
+  .section-contact .contact-text {
+    text-align: center;
+    margin-bottom: 40px; }
+  .section-contact .form-group input,
+  .section-contact .form-group textarea {
+    height: 50px;
+    max-width: 500px;
+    width: 100%;
+    margin: 7.5px 0;
+    padding: 20px;
+    box-sizing: border-box; }
+  .section-contact .form-group textarea {
+    height: 250px; }
+  .section-contact .form-group .form-input {
+    background-color: #00c4c4;
+    opacity: 0.5;
+    border: none;
+    color: #fff;
+    font-weight: 700; }
+    .section-contact .form-group .form-input:focus {
+      opacity: 1;
+      border-left: 5px solid #355b82; }
+  .section-contact .address-date {
+    line-height: 25px; }
+    .section-contact .address-date h5 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 0; }
+    .section-contact .address-date p {
+      font-size: 20px; }
+  .section-contact ::placeholder {
+    font-size: 15px;
+    color: #fff; }
+
+.page-footer {
+  padding: 30px 0;
+  background-color: #262626;
+  min-height: 90px; }
+  .page-footer .text-footer {
+    color: #b9b9b9;
+    line-height: 30px; }
+    .page-footer .text-footer:nth-of-type(1) {
+      font-size: 16px; }
+    .page-footer .text-footer:nth-of-type(2) {
+      text-align: center; }
+      .page-footer .text-footer:nth-of-type(2) a {
+        color: #b9b9b9;
+        font-family: Pacifico;
+        font-size: 25px;
+        font-weight: 400; }
+    .page-footer .text-footer:nth-of-type(3) {
+      text-align: right;
+      font-size: 15px; }
+      .page-footer .text-footer:nth-of-type(3) .love-text {
+        color: #ff2b58;
+        font-weight: 700; }
+
+@keyframes scroll-animation {
+  to {
+    opacity: 0.3; } }
+@media (max-width: 768px) {
+  .text-footer {
+    text-align: center !important; } }
 @media (max-width: 576px) {
   .subscribe-input {
     margin-right: 0 !important; } }

@@ -11,39 +11,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <nav class="main-navbar navbar fixed-top navbar-expand-md 
-               navbar-light">
+<body data-spy="scroll" data-target="#navbar" data-offset="100">
+    <nav id='navbar' class="main-navbar navbar fixed-top navbar-expand-md navbar-light">
         <div class="container ">
             <a class='navbar-brand page-logo' href="#">Cahee</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-            <div class="collapse navbar-collapse justify-content-end" id="main-navbar">
+            <div id="spy-scroll-id" class="collapse navbar-collapse justify-content-end" id="main-navbar">
                 <ul class="navbar-nav  ">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">HOME</a>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#home">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ABOUT</a>
+                        <a class="nav-link" href="#about">ABOUT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">SERVICES</a>
+                        <a class="nav-link" href="#services">SERVICES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">GALLERY</a>
+                        <a class="nav-link" href="#gallery">GALLERY</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">BLOG</a>
+                        <a class="nav-link" href="#blog">BLOG</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">CONTACT</a>
+                        <a class="nav-link" href="#contact">CONTACT</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <header class="section-header">
+    <header id='home' class="section-header">
         <div class="header-info">
             <div class="container position-relative h-100">
                 <div class="col-md-5 pl-0">
@@ -60,12 +59,12 @@
         </div>
     </header>
 
-    <section class="section-about-us">
+    <section id='about' class="section-about-us">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 about-us-img"><img src="img/about-img.png" alt="" class="about-img"></div>
 
-                <section class="col-lg-5 offset-lg-1 about-us-text">
+                <section class="col-lg-5 offset-lg-1 px-0 about-us-text">
                     <h2 class="section-title">About Us</h2>
                     <p>Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
                     <p>Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
@@ -75,7 +74,7 @@
 
         </div>
     </section>
-    <section class="section-our-services">
+    <section id='services' class="section-our-services">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 our-services-buttons d-flex flex-column align-items-end">
@@ -98,7 +97,7 @@
             </div>
         </div>
     </section>
-    <section class="section-gallery">
+    <section id='gallery' class="section-gallery">
         <div class="container">
             <div class="col-lg-6 offset-lg-3">
                 <h2 class='section-title'>Gallery</h2>
@@ -106,16 +105,16 @@
             </div>
             <div class="row">
                 <div class="col-lg-8">
-                    <img src="img/img-gallery-1.png" alt="">
+                    <img class="image"src="img/img-gallery-1.png" alt="">
                 </div>
                 <div class="col-lg-4">
-                    <img src="img/img-gallery-2.png" alt="">
-                    <img src="img/img-gallery-3.png" alt="">
+                    <img class="image" src="img/img-gallery-2.png" alt="">
+                    <img class="image"  src="img/img-gallery-3.png" alt="">
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6"><img src="img/img-gallery-4.png" alt=""></div>
-                <div class="col-lg-6"><img src="img/img-gallery-5.png" alt=""></div>
+                <div class="col-lg-6"><img class="image" src="img/img-gallery-4.png" alt=""></div>
+                <div class="col-lg-6"><img class="image" src="img/img-gallery-5.png" alt=""></div>
             </div>
             <a href='#' class="button button-gallery">VIEW MORE</a>
         </div>
@@ -131,15 +130,15 @@
         </div>
     </section>
 
-    <section class="section-blog">
+    <section id='blog' class="section-blog">
         <div class="container">
             <div class="col-md-6 offset-md-3 section-blog-text">
                 <h2 class='section-title'>Blog</h2>
                 <p>Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
             </div>
             <div class="row blog-group-cards">
-                <div class="col-md-4 ">
-                    <div class="blog-card card-1">
+                <div class="col-lg-4 ">
+                    <div class="image blog-card card-1">
                         <section class="blog-card-date"><span class="number">20</span> NOV</section>
                         <div class="blog-card-text">
                             <h4 class="blog-card-title">Green Smoothies: Too Much of a Good Thing?</h4>
@@ -148,8 +147,8 @@
 
                     </div>
                 </div>
-                <div class="col-md-4 ">
-                    <div class="blog-card card-2">
+                <div class="col-lg-4 ">
+                    <div class="image blog-card card-2">
                         <section class="blog-card-date"><span class="number">14</span> NOV</section>
                         <div class="blog-card-text">
                             <h4 class="blog-card-title">Growing Food and a “Thirst” for Innovation</h4>
@@ -158,8 +157,8 @@
 
                     </div>
                 </div>
-                <div class="col-md-4 ">
-                    <div class="blog-card card-3">
+                <div class="col-lg-4 ">
+                    <div class="image blog-card card-3">
                         <section class="blog-card-date"><span class="number">10</span> NOV</section>
                         <div class="blog-card-text">
                             <h4 class="blog-card-title">Pesticides & Food: What You Need to Know</h4>
@@ -170,13 +169,55 @@
                 </div>
             </div>
             <div class="row"> <a href="#" class="button blog-button">VIEW MORE</a></div>
-           
+
         </div>
     </section>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <section id='contact' class="section-contact">
+        <div class="container">
+            <div class="col-md-4 offset-md-4 px-0">
+                <h2 class="section-title">Contact</h2>
+                <p class="contact-text">For new projects, ideas, business or anything you'd like to discuss, contact with me!</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 contact-form">
+                    <form action="">
+                        <div class="form-group">
+                            <input type="text" class="form-input input-name" placeholder="Your name...">
+
+                            <input type="text" class="form-input input-email" placeholder="Your email...">
+
+                            <input type="text" class="form-input input-phone" placeholder="Your phone number...">
+
+                            <textarea class="form-input input-message" placeholder="Your messge..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="col-md-10 offset-md-1 address-date">
+                        <h5>ADDRESS</h5>
+                        <p>123 City name, Street, City, Country </p>
+                        <h5>EMAIL</h5>
+                        <p>cahee@domain.com</p>
+                        <h5>PHONE</h5>
+                        <p>+012 345 6789</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-footer">© 2015 Company. All right reserved.</div>
+                <div class="col-md-2 offset-md-1  text-footer"><a class='' href="#home">Cahee</a></div>
+                <div class="col-md-4 offset-md-1 text-footer">Made with <span class="love-text">love</span> by Auskteez</div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src=""></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
